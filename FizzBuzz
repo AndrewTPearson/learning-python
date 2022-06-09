@@ -1,0 +1,21 @@
+# A simple program which counts and prints the numbers from 1 to a defined maximum - 25 by default - and, for two numbers
+# designated "fizz" and "buzz" (set to 3 and 5 respectively by default), replaces all multiples of these numbers with "Fizz",
+# "Buzz", or, for numbers which are multiples of both, "Fizzbuzz".
+
+x=1
+fizz=3
+buzz=5
+endpoint=25
+
+while(x<=endpoint):
+    if(x%fizz==0):
+       if(x%buzz==0):
+           print("Fizzbuzz")
+       else:
+           print("Fizz")
+    else:
+        if(x%buzz==0):
+            print("Buzz")
+        else:
+            print(x)
+    x=x+1

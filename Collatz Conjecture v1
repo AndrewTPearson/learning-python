@@ -1,0 +1,26 @@
+# A simple program written to practice the use of iteration. The Collatz Conjecture states that if you take any integer and subsequently follow
+# the following algorithm: (If your number is even, halve it; if your number is odd, multiply it by three and add one) you will eventually reach
+# one. This program takes any number, applies those operations until it reaches one, and then confirms that it has reached one and how many steps
+# were required.
+
+# By default this starts at a value of 30. Ideally it would take any value; originally the line which reads 
+# value = 30
+# read instead as
+# value = int(input("What number shall I start at?"))
+# However, I have been unable to get any input function to work. This almost certainly represents a gap in my programming knowledge; I hope to fix that
+# gap and come back to fix this program so that it will take any input from the user!
+
+# If one wanted to see the individual steps, one could insert the following code above the current line {come back and check}:
+#     print(int(value))
+# Ideally one could also give the user an option of whether or not they wish to see the individual steps by which their number reached one; however,
+# coding this would require me to fix the aforementioned problem around taking user inputs.
+
+value = 30
+steps = 0
+while (value != 1):
+    steps +=1
+    if (value%2 == 0):
+        value /= 2
+    else:
+        value = 3 * value + 1
+print("Yes, your number reached 1. This required " + str(steps) + " steps.")
